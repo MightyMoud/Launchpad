@@ -1,0 +1,77 @@
+::placeholder {
+    color: #e1e2e6;
+}
+
+input:focus {
+    outline: 0;
+}
+
+.searchOpen {
+    position: relative;
+    display: flex;
+    width: 150px;
+    height: 40px;
+    align-items: center;
+    border-radius: 12px;
+    color: hsl(210, 50%, 96%);
+    background: #46618b;
+    transition: all 0.8s ease-in-out;
+}
+
+.searchBtn {
+    display: none;
+    position: absolute;
+    right: 0px;
+    height: 50px;
+    border-radius: 20px;
+    width: 40px;
+    background: #394e70;
+    color: hsl(210, 50%, 96%);
+    border: none;
+    font-size: 0.8rem;
+    transition: all 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.searchIcon {
+    position: absolute;
+    right: 10px;
+    transform: rotateY(180deg);
+}
+
+.fieldOpen {
+    transition: all 0.8s ease-in-out;
+    background: transparent;
+    //padding-left: 10px;
+    border: unset;
+    width: 80%;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+}
+
+.suggestionCon {
+    color: var(--text-color);
+    position: absolute;
+    width: 100%;
+    border-radius: 0 0 12px 12px;
+    background: #46618b;
+}
+
+.slideIn {
+    text-align: left;
+}
+
+.suggestionList {
+    position: relative;
+    left: -30px;
+    list-style: none;
+    text-decoration: none;
+}
+
+.suggestionList li {
+    transition: color 0.1s ease-in;
+}
+
+.suggestionHighlighted {
+    color: hsl(210, 50%, 96%);
+}

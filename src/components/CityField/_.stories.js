@@ -1,17 +1,17 @@
 import React from 'react';
+import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { Button } from '@storybook/react/demo';
+
+import CityField from './component';
 
 export default {
-    title: 'Button',
+    id: '1',
+    title: 'CityField',
 };
 
-export const text = () => <Button onClick={action('clicked')}>Hello Button</Button>;
 
-export const emoji = () => (
-    <Button onClick={action('clicked')}>
-        <span role="img" aria-label="so cool">
-            😀 😎 👍 💯
-    </span>
-    </Button>
-);
+storiesOf('CityField', module)
+    .add('Display', () => <CityField city={'Melbourne'}></CityField>)
+    .add('Loading', () => <CityField loading={true}></CityField>)
+    .add('Input', () => <CityField output={false} loading={false}></CityField>)
+    .add('Input Error', () => <CityField loading={false} error={true}></CityField>)
