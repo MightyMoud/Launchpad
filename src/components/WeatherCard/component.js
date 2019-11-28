@@ -1,5 +1,4 @@
 /**@jsx jsx */
-import React from 'react'
 import { jsx } from 'theme-ui';
 import { Flex, Text, Box, Image } from '@theme-ui/components';
 
@@ -7,8 +6,10 @@ import ThemeProvider from '../ThemeProvider';
 import CityField from '../CityField/component';
 import MinMax from './MinMax'
 import Condition from './Condition';
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+import '../../App.css'
 
-const WeatherCard = ({ city, country, temp, maxTemp, minTemp, main, id, error, loading, output }) => {
+const WeatherCard = ({ city, country, temp, maxTemp, minTemp, main, error, loading, output, SearchCity }) => {
     var highColor = 0;
     var lowColor = 0;
     var color = null;
@@ -68,20 +69,24 @@ const WeatherCard = ({ city, country, temp, maxTemp, minTemp, main, id, error, l
 
     return (
         <ThemeProvider>
-            <Flex p={3} m={2} sx={{ variant: 'layout.card', background: color }}>
-                <Box sx={{ textAlign: 'center' }}>
-                    <CityField output={output} city={city} loading={loading} erorr={error}></CityField>
-                    <Text sx={{ variant: 'text.h3', color: 'text', textTransform: 'uppercase', fontSize: '4' }}>
-                        {country}
-                    </Text>
-                </Box>
-                <Image src={icon} sx={{ maxWidth: '50%' }} />
-                <Condition temp={temp} main={main} />
-                <Flex sx={{ flexDirection: 'row', justifyContent: 'space-between', width: '100%' }}>
-                    <MinMax arrow='up' temp={maxTemp} color='red' />
-                    <MinMax arrow='down' temp={maxTemp} color='blue' />
-                </Flex>
-            </Flex>
+            <TransitionGroup>
+                <CSSTransition key={color} appear={true} in={true} classNames="fade" timeout={400}>
+                    <Flex p={3} m={2} sx={{ variant: 'layout.card', background: color }}>
+                        <Box sx={{ textAlign: 'center' }}>
+                            <CityField error={error} output={output} city={city} loading={loading} SearchCity={SearchCity}></CityField>
+                            <Text sx={{ variant: 'text.h3', color: 'text', textTransform: 'uppercase', fontSize: '4' }}>
+                                {country}
+                            </Text>
+                        </Box>
+                        <Image src={icon} sx={{ maxWidth: '40%' }} />
+                        <Condition temp={temp ? temp.toFixed(0) : '00'} main={main} />
+                        <Flex sx={{ flexDirection: 'row', justifyContent: 'space-between', width: '100%' }}>
+                            <MinMax arrow='up' temp={maxTemp ? maxTemp.toFixed(1) : '00.0'} color='red' />
+                            <MinMax arrow='down' temp={minTemp ? minTemp.toFixed() : '00.0'} color='blue' />
+                        </Flex>
+                    </Flex>
+                </CSSTransition>
+            </TransitionGroup>
         </ThemeProvider >
     )
 }

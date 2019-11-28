@@ -7,6 +7,7 @@ import * as serviceWorker from './serviceWorker';
 import "typeface-merriweather";
 import "typeface-fira-sans";
 import "typeface-montserrat";
+import "typeface-ropa-sans";
 
 ReactDOM.render(< App />, document.getElementById('root'));
 

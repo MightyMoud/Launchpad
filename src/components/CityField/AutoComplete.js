@@ -1,13 +1,12 @@
 /**@jsx jsx */
-import React, { useState, Children } from 'react';
+import { useState } from 'react';
 import Autosuggest from 'react-autosuggest';
 import { Icon } from 'antd';
 import { jsx } from 'theme-ui';
-import { Close } from '@theme-ui/components';
 
 import ThemeProvider from '../ThemeProvider'
 import './styles.css'
-//import { citiesList } from './citiesList.js'
+import { citiesList } from './citiesList.js'
 
 const AutoComplete = (props) => {
 
@@ -15,7 +14,7 @@ const AutoComplete = (props) => {
     const [suggestions, setSuggestions] = useState([]);
     const [city, setCity] = useState('');
 
-    const citiesList = [{ city: 'cairo', country: 'egypt' }, { city: 'new york', country: 'usa' }]
+    // const citiesList = [{ city: 'Cairo', country: 'Egypt' }, { city: 'New York', country: 'USA' }]
 
     // Teach Autosuggest how to calculate suggestions for any given input value.
     const getSuggestions = value => {
@@ -23,7 +22,7 @@ const AutoComplete = (props) => {
         const inputLength = inputValue.length;
         let count = 0;
         return inputLength === 0 ? [] : citiesList.filter(city =>
-            city.city.toLowerCase().slice(0, inputLength) === inputValue && count++ < 5
+            city.city.toLowerCase().slice(0, inputLength) === inputValue && count++ < 2
         );
     };
 
@@ -35,10 +34,9 @@ const AutoComplete = (props) => {
     };
 
     // Use your imagination to render suggestions.
-    const renderSuggestion = suggestion => (
-        <div className='slideIn'>
-            {suggestion.city}, {suggestion.country}
-        </div>
+    const renderSuggestion = suggestion => ( <
+        div className = 'slideIn' > { suggestion.city }, { suggestion.country } <
+        /div>
     );
 
     const onChange = (e, { newValue }) => {
@@ -63,6 +61,7 @@ const AutoComplete = (props) => {
     const searchWeather = (e) => {
         e.preventDefault();
         props.searchCity(city);
+        props.output();
         resetInputFiled();
     }
 
@@ -70,7 +69,8 @@ const AutoComplete = (props) => {
     const inputProps = {
         placeholder: 'Search for a city',
         value,
-        onChange: onChange
+        onChange: onChange,
+        autoFocus: 'true'
     };
 
     const handleEnterButton = (e) => {
@@ -90,30 +90,35 @@ const AutoComplete = (props) => {
         'suggestionHighlighted': 'suggestionHighlighted'
     };
 
-    return (
-        <ThemeProvider>
-            <form className='searchOpen'>
-                <Icon style={{ color: 'white' }} type="search" className='searchIcon' />
-                <Autosuggest
-                    theme={autosuggestStyle}
-                    highlightFirstSuggestion={true}
-                    suggestions={suggestions}
-                    onSuggestionsFetchRequested={onSuggestionsFetchRequested}
-                    onSuggestionsClearRequested={onSuggestionsClearRequested}
-                    getSuggestionValue={getSuggestionValue}
-                    renderSuggestion={renderSuggestion}
-                    inputProps={inputProps}
-                />
-                {props.children}
-                <input
-                    className='searchBtn'
-                    onClick={searchWeather}
-                    onKeyDown={handleEnterButton}
-                    type="submit"
-                    value="GO"
-                />
-            </form>
-        </ThemeProvider>
+    return ( <
+        ThemeProvider >
+        <
+        form className = 'searchOpen' >
+        <
+        Icon style = {
+            { color: 'white' }
+        }
+        type = "search"
+        className = 'searchIcon' / >
+        <
+        Autosuggest theme = { autosuggestStyle }
+        highlightFirstSuggestion = { true }
+        suggestions = { suggestions }
+        onSuggestionsFetchRequested = { onSuggestionsFetchRequested }
+        onSuggestionsClearRequested = { onSuggestionsClearRequested }
+        getSuggestionValue = { getSuggestionValue }
+        renderSuggestion = { renderSuggestion }
+        inputProps = { inputProps }
+        /> { props.children } <
+        input className = 'searchBtn'
+        onClick = { searchWeather }
+        onKeyDown = { handleEnterButton }
+        type = "submit"
+        value = "GO" /
+        >
+        <
+        /form> < /
+        ThemeProvider >
     );
 }
 

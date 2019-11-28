@@ -2,7 +2,6 @@ import { toTheme } from '@theme-ui/typography'
 import legibleTheme from 'typography-theme-legible'
 import merge from 'lodash.merge'
 import { deep } from '@theme-ui/presets'
-import { lighten } from '@theme-ui/color'
 
 
 const typography = toTheme(legibleTheme)
@@ -90,6 +89,11 @@ export default merge(typography, {
             fontSize: 7,
             color: 'text'
         },
+        day: {
+            fontFamily: 'Ropa Sans, sans-serif',
+            fontSize: 4,
+            color: '#c00'
+        },
         body: {
             ...body,
             color: 'text'
@@ -111,6 +115,26 @@ export default merge(typography, {
         card: {
             borderRadius: '20px',
             flexDirection: 'column',
+            justifyContent: 'space-around',
+            alignItems: 'center',
+            minHeight: '450px',
+            width: '350px'
+        },
+        dayContainer: {
+            position: 'relative',
+            top: '50%',
+            left: '10%',
+            transform: 'translate(50%,-50%)',
+            zIndex: '2',
+            bg: 'ghostwhite',
+            width: '15%',
+            borderRadius: '10px',
+            boxShadow: 'inset 0 2px 2px 0 rgba(0,0,0,.3), inset 0 -2px 2px 0 rgba(255,255,255,.2)',
+            textAlign: 'center',
+        },
+        block: {
+            borderRadius: '5px',
+            flexDirection: 'row',
             justifyContent: 'space-around',
             alignItems: 'center'
         }

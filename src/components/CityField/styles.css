@@ -41,12 +41,12 @@ input:focus {
 .fieldOpen {
     transition: all 0.8s ease-in-out;
     background: transparent;
-    //padding-left: 10px;
     border: unset;
     width: 80%;
     font-family: 'Fira Sans', sans-serif;
     font-size: 0.8rem;
     line-height: 0.8rem;
+    color: hsl(210, 50%, 96%);
 }
 
 .suggestionCon {
