@@ -2,14 +2,13 @@
 import './App.css';
 import ThemeProvider from './components/ThemeProvider';
 import { jsx } from 'theme-ui';
-import TimeEngine from './components/TimeEngine/component'
-import WeatherEngine from './components/WeatherEngine/component'
+import NewsCard from './components/NewsCard/component'
 
 function App() {
   return (
     <ThemeProvider>
 
-      <TimeEngine location='Cairo,Egypt' />
+      <NewsCard location='Cairo,Egypt' />
 
     </ThemeProvider>
   );

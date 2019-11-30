@@ -17,7 +17,7 @@ const heading = {
 
 const body = {
     fontFamily: 'Fira Sans, sans-serif',
-    lineHeight: 'body',
+    lineHeight: '1',
     fontWeight: 'body',
     letterSpacing: '-0.02em',
     textDecoration: 'none',
@@ -26,6 +26,12 @@ const body = {
 
 export default merge(typography, {
     ...deep,
+    colors: {
+        ...deep.colors,
+        blueHigh: '#12ACFD',
+        background3: '#29457C'
+    },
+
     alerts: {
         primary: {
             color: 'text',
@@ -137,6 +143,18 @@ export default merge(typography, {
             flexDirection: 'row',
             justifyContent: 'space-around',
             alignItems: 'center'
+        },
+        NewsBlockCon: {
+            display: 'flex',
+            flexDirection: 'row',
+            width: '850px',
+            height: '100px',
+            overflow: 'hidden',
+            bg:'background3',
+            '&:hover .more' : {
+                 top: '75%' 
+                } 
         }
+
     },
 })

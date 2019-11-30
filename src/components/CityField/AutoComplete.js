@@ -6,7 +6,7 @@ import { jsx } from 'theme-ui';
 
 import ThemeProvider from '../ThemeProvider'
 import './styles.css'
-import { citiesList } from './citiesList.js'
+// import { citiesList } from './citiesList.js'
 
 const AutoComplete = (props) => {
 
@@ -14,7 +14,7 @@ const AutoComplete = (props) => {
     const [suggestions, setSuggestions] = useState([]);
     const [city, setCity] = useState('');
 
-    // const citiesList = [{ city: 'Cairo', country: 'Egypt' }, { city: 'New York', country: 'USA' }]
+    const citiesList = [{ city: 'Cairo', country: 'Egypt' }, { city: 'New York', country: 'USA' }]
 
     // Teach Autosuggest how to calculate suggestions for any given input value.
     const getSuggestions = value => {
@@ -34,9 +34,8 @@ const AutoComplete = (props) => {
     };
 
     // Use your imagination to render suggestions.
-    const renderSuggestion = suggestion => ( <
-        div className = 'slideIn' > { suggestion.city }, { suggestion.country } <
-        /div>
+    const renderSuggestion = suggestion => (
+        <div className='slideIn' > {suggestion.city}, {suggestion.country} </div>
     );
 
     const onChange = (e, { newValue }) => {
@@ -90,35 +89,34 @@ const AutoComplete = (props) => {
         'suggestionHighlighted': 'suggestionHighlighted'
     };
 
-    return ( <
-        ThemeProvider >
-        <
-        form className = 'searchOpen' >
-        <
-        Icon style = {
-            { color: 'white' }
-        }
-        type = "search"
-        className = 'searchIcon' / >
-        <
-        Autosuggest theme = { autosuggestStyle }
-        highlightFirstSuggestion = { true }
-        suggestions = { suggestions }
-        onSuggestionsFetchRequested = { onSuggestionsFetchRequested }
-        onSuggestionsClearRequested = { onSuggestionsClearRequested }
-        getSuggestionValue = { getSuggestionValue }
-        renderSuggestion = { renderSuggestion }
-        inputProps = { inputProps }
-        /> { props.children } <
-        input className = 'searchBtn'
-        onClick = { searchWeather }
-        onKeyDown = { handleEnterButton }
-        type = "submit"
-        value = "GO" /
-        >
-        <
-        /form> < /
-        ThemeProvider >
+    return (<ThemeProvider >
+        <form className='searchOpen' >
+            <Icon
+                style={
+                    { color: 'white' }
+                }
+                type="search"
+                className='searchIcon' />
+            <Autosuggest
+                theme={autosuggestStyle}
+                highlightFirstSuggestion={true}
+                suggestions={suggestions}
+                onSuggestionsFetchRequested={onSuggestionsFetchRequested}
+                onSuggestionsClearRequested={onSuggestionsClearRequested}
+                getSuggestionValue={getSuggestionValue}
+                renderSuggestion={renderSuggestion}
+                inputProps={inputProps}
+            />
+            {props.children}
+            <input
+                className='searchBtn'
+                onClick={searchWeather}
+                onKeyDown={handleEnterButton}
+                type="submit"
+                value="GO" /
+            >
+        </form>
+    </ThemeProvider >
     );
 }
 
