@@ -1,7 +1,6 @@
 /**@jsx jsx */
 import { useState } from 'react';
 import Autosuggest from 'react-autosuggest';
-import { Icon } from 'antd';
 import { jsx } from 'theme-ui';
 
 import ThemeProvider from '../ThemeProvider'
@@ -91,12 +90,12 @@ const AutoComplete = (props) => {
 
     return (<ThemeProvider >
         <form className='searchOpen' >
-            <Icon
+            {/* <Icon
                 style={
                     { color: 'white' }
                 }
                 type="search"
-                className='searchIcon' />
+                className='searchIcon' /> */}
             <Autosuggest
                 theme={autosuggestStyle}
                 highlightFirstSuggestion={true}

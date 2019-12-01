@@ -31,7 +31,39 @@ export default merge(typography, {
         blueHigh: '#12ACFD',
         background3: '#29457C'
     },
-
+    forms: {
+        label: {
+            fontSize: 1,
+            fontWeight: 'bold',
+        },
+        input: {
+            borderColor: 'gray',
+            '&:focus': {
+                borderColor: 'primary',
+                boxShadow: t => `0 0 0 2px ${t.colors.primary}`,
+                outline: 'none',
+            },
+        },
+        select: {
+            borderColor: 'gray',
+            '&:focus': {
+                borderColor: 'primary',
+                boxShadow: t => `0 0 0 2px ${t.colors.primary}`,
+                outline: 'none',
+            },
+        },
+        textarea: {
+            borderColor: 'gray',
+            '&:focus': {
+                borderColor: 'primary',
+                boxShadow: t => `0 0 0 2px ${t.colors.primary}`,
+                outline: 'none',
+            },
+        },
+        slider: {
+            bg: 'muted',
+        },
+    },
     alerts: {
         primary: {
             color: 'text',
@@ -145,15 +177,16 @@ export default merge(typography, {
             alignItems: 'center'
         },
         NewsBlockCon: {
+            margin: 1,
             display: 'flex',
             flexDirection: 'row',
             width: '850px',
             height: '100px',
             overflow: 'hidden',
-            bg:'background3',
-            '&:hover .more' : {
-                 top: '75%' 
-                } 
+            bg: 'background3',
+            '&:hover .more': {
+                top: '75%'
+            }
         }
 
     },

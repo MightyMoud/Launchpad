@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { jsx } from 'theme-ui';
 import { Text } from '@theme-ui/components'
 
+
 import ThemeProvider from '../ThemeProvider'
 
 const NewsTitle = ({ title }) => {

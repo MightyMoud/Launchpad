@@ -11,4 +11,4 @@ export default {
 
 storiesOf('NewsCard', module)
     .add('day', () => <NewsCard />)
-    .add('night', () => <NewsCard location='Calgary, CA' />)
+    .add('loading', () => <NewsCard loading={true} />)

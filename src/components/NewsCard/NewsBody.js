@@ -2,13 +2,15 @@
 import React, { useEffect, useState } from 'react';
 import { jsx } from 'theme-ui';
 import { Text } from '@theme-ui/components'
+import Skeleton from 'react-loading-skeleton';
 
 import ThemeProvider from '../ThemeProvider'
 
-const NewsBody = () => {
+const NewsBody = ({ content }) => {
     return (
         <ThemeProvider>
             <Text variant='text.body' sx={{
+                flex: '0 0 50%',
                 margin: 0,
                 textAlign: 'justify',
                 overflow: 'hidden',
@@ -24,7 +26,7 @@ const NewsBody = () => {
                     background: 'linear-gradient(transparent 3px, #29457C)'
                 }
             }}>
-                Drinking up to four coffees a day can reduce the risk of type 2 diabetes and high blood pressure, according to a study.\r\nHowever, the benefit is lost if more than four cups of coffee are consumed.\r\nResearchers from the universities of Navarre in Spain and Cat…
+                {content}
             </Text>
         </ThemeProvider>
     );
