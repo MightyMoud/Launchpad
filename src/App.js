@@ -2,14 +2,14 @@
 import './App.css';
 import ThemeProvider from './components/ThemeProvider';
 import { jsx } from 'theme-ui';
-import NewsCard from './components/NewsCard/component'
-import NewsEngine from './components/NewsEngine/component';
+
+import SideNav from './components/SideNav/component'
 
 function App() {
   return (
     <ThemeProvider>
 
-      <NewsEngine></NewsEngine>
+      <SideNav></SideNav>
 
     </ThemeProvider>
   );

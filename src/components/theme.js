@@ -31,6 +31,26 @@ export default merge(typography, {
         blueHigh: '#12ACFD',
         background3: '#29457C'
     },
+    images: {
+        avatar: {
+            width: 100,
+            height: 100,
+            borderRadius: 99999,
+        },
+    },
+    links: {
+        nav: {
+            fontFamily: 'Merriweather, sans-serif',
+            color: 'text',
+            px: '2',
+            py: '2',
+            my: '1',
+            width: '100%',
+            textAlign: 'center',
+            fontSize: '2',
+            height: '38px'
+        }
+    },
     forms: {
         label: {
             fontSize: 1,
