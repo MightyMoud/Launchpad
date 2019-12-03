@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import { jsx } from 'theme-ui';
 import { Text } from '@theme-ui/components'
-import Skeleton from 'react-loading-skeleton';
 
 import ThemeProvider from '../ThemeProvider'
 
@@ -23,7 +22,7 @@ const NewsBody = ({ content }) => {
                     position: 'absolute',
                     left: '0',
                     top: '0',
-                    background: 'linear-gradient(transparent 3px, #29457C)'
+                    background: 'linear-gradient(transparent 3px, #353b59)'
                 }
             }}>
                 {content}

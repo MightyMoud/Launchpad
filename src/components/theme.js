@@ -2,6 +2,7 @@ import { toTheme } from '@theme-ui/typography'
 import legibleTheme from 'typography-theme-legible'
 import merge from 'lodash.merge'
 import { deep } from '@theme-ui/presets'
+import { lighten } from '@theme-ui/color';
 
 
 const typography = toTheme(legibleTheme)
@@ -225,9 +226,9 @@ export default merge(typography, {
             display: 'flex',
             flexDirection: 'row',
             width: '100%',
-            height: '70px',
+            height: '80px',
             overflow: 'hidden',
-            bg: 'background3',
+            bg: lighten('background', 0.10),
             '&:hover .more': {
                 top: '75%'
             }

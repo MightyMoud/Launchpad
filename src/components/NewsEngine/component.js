@@ -6,6 +6,8 @@ import Skeleton from 'react-loading-skeleton';
 
 import ThemeProvider from '../ThemeProvider'
 import NewsCard from '../NewsCard/component'
+import CountryDropDown from './CountryDropDown';
+import CategoryDropDown from './CategoryDropDown';
 
 const inistialState = {
     loading: true,
@@ -59,7 +61,15 @@ const NewsEngine = () => {
 
     return (
         <ThemeProvider>
-            <Flex bg='background' p={2} sx={{ flexDirection: 'column' }} >
+            <Flex p={2} sx={{ flexDirection: 'column', position: 'relative' }} >
+                <CountryDropDown
+                    value={country}
+                    change={(e) => setCountry(e.target.value)}
+                />
+                <CategoryDropDown
+                    value={category}
+                    change={(e) => setCategory(e.target.value)}
+                />
                 {!loading ? articles.map((article) =>
                     <NewsCard
                         key={article.title}
@@ -77,20 +87,6 @@ const NewsEngine = () => {
                         </>
                     )
                 }
-                <Box as='form' sx={{ color: 'text' }}>
-                    <Label htmlFor='country'>Country</Label>
-                    <Select onChange={(e) => setCountry(e.target.value)} value={country} name='country' mb={3}>
-                        <option value='au'>Australia</option>
-                        <option value='CA'>Canada</option>
-                        <option value='us'>USA</option>
-                    </Select>
-                    <Label htmlFor='Category'>Category</Label>
-                    <Select onChange={(e) => setCategory(e.target.value)} value={category} name='country' mb={3}>
-                        <option value='business'>Business</option>
-                        <option value='technology'>Technology</option>
-                        <option value='sports'>Sports</option>
-                    </Select>
-                </Box>
             </Flex>
         </ThemeProvider>
     )
