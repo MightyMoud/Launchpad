@@ -46,7 +46,7 @@ const NewsEngine = () => {
         dispatch({
             type: 'SEARCH_PROGRESS'
         })
-        let res = await fetch(`https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${key}&pageSize=3`)
+        let res = await fetch(`https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${key}&pageSize=2`)
         let resJSON = await res.json();
         let articles = await resJSON.articles;
         dispatch({
@@ -81,7 +81,6 @@ const NewsEngine = () => {
                     ></NewsCard>
                 ) : (
                         <>
-                            <NewsCard loading={loading} />
                             <NewsCard loading={loading} />
                             <NewsCard loading={loading} />
                         </>

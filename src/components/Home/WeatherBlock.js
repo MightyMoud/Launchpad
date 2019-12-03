@@ -12,13 +12,14 @@ import WeatherEngine from '../WeatherEngine/component'
 const WeatherBlock = () => {
     return (
         <ThemeProvider>
-            <Container p={1} sx={{ bg: lighten('background', .07) }}>
+            <Container p={1} sx={{ bg: lighten('background', .07), height: '100%' }}>
                 <Text variant='text.h2' sx={{ textAlign: 'center', color: darken('text', 0.07) }}>Weather</Text>
                 <Container sx={{ display: 'flex', alignItems: 'space-around' }}>
                     <WeatherEngine location='Sydney, au' />
                     <WeatherEngine location='london, gb' />
                     <WeatherEngine location='perth, au' />
-                    <WeatherEngine location='toronto, CA' />
+                    <WeatherEngine location='vancouver, CA' />
+                    <WeatherEngine location='new york, USA' />
                 </Container>
             </Container>
         </ThemeProvider>

@@ -196,7 +196,8 @@ export default merge(typography, {
             justifyContent: 'space-around',
             alignItems: 'center',
             minHeight: '200px',
-            maxHeight: '220px',
+            height: '26vh',
+            maxHeight: '240px',
             position: 'relative',
             minWidth: '140px',
             width: '80%',
@@ -226,7 +227,7 @@ export default merge(typography, {
             display: 'flex',
             flexDirection: 'row',
             width: '100%',
-            height: '80px',
+            height: 'calc(15vh - 30px)',
             overflow: 'hidden',
             bg: lighten('background', 0.10),
             '&:hover .more': {

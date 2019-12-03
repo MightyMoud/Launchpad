@@ -59,15 +59,7 @@ const ClockFace = (props) => {
         background-image: linear-gradient(#e3e3e3, #f7f7f7);
         border-radius: 50%;
         box-shadow: inset 0 -1px 0 #fafafa, inset 0 1px 0 #e3e3e3;
-        &:after{
-            content: "";
-            display: block;
-            width: 20px;
-            height: 20px;
-            margin: 65px;
-            background-color: #ddd;
-            border-radius: 50%;
-        }
+    
     `
 
     return (

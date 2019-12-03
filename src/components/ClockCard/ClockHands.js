@@ -5,7 +5,6 @@ import styled from '@emotion/styled';
 import { keyframes } from '@emotion/core'
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
-
 import ThemeProvider from '../ThemeProvider'
 
 const ClockHands = ({ hourAngle, minAngle, secAngle }) => {
@@ -43,14 +42,14 @@ const ClockHands = ({ hourAngle, minAngle, secAngle }) => {
         transition: all 1s ease-in;
         position: absolute;
         z-index: 3;
-        top: 80px;
-        left: 128px;
+        top: 60px;
+        left: 95px;
         width: 4px;
-        height: 65px;
+        height: 50px;
         background-color: #555;
         border-radius: 2px;
         box-shadow: 0 0 2px rgba(0, 0, 0, .2);
-        transform-origin: 2px 50px;
+        transform-origin: 2px 35px;
         transform: translateZ(0);
         &.trans-appear {
             transform:rotate(0deg);
@@ -81,14 +80,14 @@ const ClockHands = ({ hourAngle, minAngle, secAngle }) => {
         will-change: transform;
         position: absolute;
         z-index: 3;
-        top: 60px;
-        left: 128px;
+        top: 40px;
+        left: 95px;
         width: 4px;
-        height: 85px;
+        height: 70px;
         background-color: #555;
         border-radius: 2px;
         box-shadow: 0 0 2px rgba(0, 0, 0, .2);
-        transform-origin: 2px 70px;
+        transform-origin: 2px 55px;
         transform: translateZ(0);
          &.trans-appear {
             transform:rotate(0deg);
@@ -119,13 +118,13 @@ const ClockHands = ({ hourAngle, minAngle, secAngle }) => {
         will-change: transform;
         position: absolute;
         z-index: 4;
-        top: 20px;
-        left: 129px;
+        top: 5px;
+        left: 95px;
         width: 2px;
-        height: 130px;
+        height: 110px;
         background-color: #a00;
         box-shadow: 0 0 2px rgba(0, 0, 0, .2);
-        transform-origin: 1px 110px;
+        transform-origin: 1px 90px;
         transform: translateZ(0);
         &:after {
             content: "";
