@@ -34,7 +34,7 @@ const CityField = ({ city, loading, error, SearchCity }) => {
     } else if (city && !loading && output && !errorLocal) {
         return (
             <ThemeProvider>
-                <Text onClick={() => setOutput(!output)} sx={{ variant: 'text.h2', fontSize: '5', position: 'relative', '&:hover': { top: '-2px' } }}>
+                <Text onClick={() => setOutput(!output)} sx={{ variant: 'text.h2', position: 'relative', '&:hover': { top: '-2px' } }}>
                     {city}
                 </Text>
             </ThemeProvider >

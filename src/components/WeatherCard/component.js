@@ -70,20 +70,20 @@ const WeatherCard = ({ city, country, temp, maxTemp, minTemp, main, error, loadi
     return (
         <ThemeProvider>
             <TransitionGroup>
-                <CSSTransition key={color} appear={true} in={true} classNames="fade" timeout={400}>
-                    <Flex p={3} m={2} sx={{ variant: 'layout.card', background: color }}>
+                <CSSTransition key={color} appear={true} exit={true} in={true} classNames="fade" timeout={400}>
+                    <Flex p={2} m='auto' my={2} sx={{ variant: 'layout.card', background: color }}>
                         <Box sx={{ textAlign: 'center' }}>
                             <CityField error={error} output={output} city={city} loading={loading} SearchCity={SearchCity}></CityField>
-                            <Text sx={{ variant: 'text.h3', color: 'text', textTransform: 'uppercase', fontSize: '4' }}>
+                            <Text sx={{ variant: 'text.body', textTransform: 'uppercase', fontSize: '2' }}>
                                 {country}
                             </Text>
                         </Box>
-                        <Image src={icon} sx={{ maxWidth: '40%' }} />
+                        <Image src={icon} sx={{ heigh: 'auto%', width: '30%' }} />
                         <Condition temp={temp ? temp.toFixed(0) : '00'} main={main} />
-                        <Flex sx={{ flexDirection: 'row', justifyContent: 'space-between', width: '100%' }}>
+                        {/* <Flex sx={{ flexDirection: 'row', justifyContent: 'space-between', width: '100%' }}>
                             <MinMax arrow='up' temp={maxTemp ? maxTemp.toFixed(1) : '00.0'} color='red' />
-                            <MinMax arrow='down' temp={minTemp ? minTemp.toFixed() : '00.0'} color='blue' />
-                        </Flex>
+                            <MinMax arrow='down' temp={minTemp ? minTemp.toFixed(1) : '00.0'} color='blue' />
+                        </Flex> */}
                     </Flex>
                 </CSSTransition>
             </TransitionGroup>

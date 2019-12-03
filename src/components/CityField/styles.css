@@ -9,8 +9,9 @@ input:focus {
 .searchOpen {
     position: relative;
     display: flex;
-    width: 150px;
-    height: 40px;
+    width: 130px;
+    height: 30px;
+    margin: 1px;
     align-items: center;
     border-radius: 12px;
     color: hsl(210, 50%, 96%);

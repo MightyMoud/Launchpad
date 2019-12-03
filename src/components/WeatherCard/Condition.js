@@ -28,10 +28,10 @@ const Condition = (props) => {
 
     return (
         <>
-            <Text sx={{ variant: 'text.numbers', fontSize: '7' }}>
+            <Text sx={{ variant: 'text.numbers', fontSize: '5' }}>
                 <Reel theme={reelStyle} text={`${props.temp}˚C`} />
             </Text>
-            <Text sx={{ variant: 'text.h3', textTransform: 'uppercase', fontSize: '4' }} >
+            <Text sx={{ variant: 'text.body', textTransform: 'uppercase', fontSize: '2' }} >
                 {props.main}
             </Text>
         </>

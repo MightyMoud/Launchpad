@@ -1,8 +1,10 @@
 /**@jsx jsx */
 import { useReducer, useEffect } from 'react';
 import { jsx } from 'theme-ui';
+import { Container } from '@theme-ui/components'
 
 import WeatherCard from '../WeatherCard/component'
+import ThemeProvider from '../ThemeProvider';
 
 
 // this is the initial state of all the variables we need/expect to get from the API plus a couple others to handle errors
@@ -37,8 +39,8 @@ const reducer = (state, action) => {
         case 'SEARCH_SUCCESS':
             return {
                 ...state,
-                temp: action.payload,
                 loading: false,
+                temp: action.payload,
                 errorMessage: action.error,
                 city: action.city,
                 main: {
@@ -114,22 +116,27 @@ const WeatherEngine = ({ location }) => {
     // Search for the initail location being passed into the component on first render
     useEffect(() => {
         getWeather(location)
-    }, [])
+    }, [location])
 
     // conditional rendering based on state values
     return (
-        <WeatherCard
-            temp={main.averageTemp}
-            minTemp={main.minTemp}
-            maxTemp={main.maxTemp}
-            city={city}
-            country={country}
-            main={weather.main}
-            error={errorMessage}
-            loading={loading}
-            output={false}
-            SearchCity={getWeather}
-        />
+        <ThemeProvider>
+            <Container >
+                <WeatherCard
+                    key={city}
+                    temp={main.averageTemp}
+                    minTemp={main.minTemp}
+                    maxTemp={main.maxTemp}
+                    city={city}
+                    country={country}
+                    main={weather.main}
+                    error={errorMessage}
+                    loading={loading}
+                    output={false}
+                    SearchCity={getWeather}
+                />
+            </Container>
+        </ThemeProvider>
     )
 }
 

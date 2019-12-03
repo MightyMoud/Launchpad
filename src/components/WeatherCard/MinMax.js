@@ -25,13 +25,13 @@ const MinMax = (props) => {
     };
 
     return (
-        <Flex sx={{ flexDirection: 'column' }}>
+        <Flex sx={{ flexDirection: 'column', textAlign: 'center' }}>
             <Flex >
-                <Text sx={{ variant: 'text.numbers', fontSize: '5' }}>
+                <Text sx={{ variant: 'text.numbers', fontSize: '3' }}>
                     <Reel theme={reelStyle} text={`${props.arrow === 'up' ? `↑` : '↓'} ${props.temp}˚C`} />
                 </Text>
             </Flex>
-            <Text  {...props} mt={-8} sx={{ variant: 'text.symbols', color: props => `${props.color}` }}>
+            <Text  {...props} sx={{ variant: 'text.symbols', color: props => `${props.color}` }}>
                 {props.arrow === 'up' ? 'MAX' : 'MIN'}
             </Text>
         </Flex>

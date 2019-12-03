@@ -12,19 +12,21 @@ const ClockFace = (props) => {
     var indicators = [];
     for (let i = 1; i < 13; i++) {
         indicators.push(<span className="clock-indicator" sx={{
-            transform: `rotate(${i * 30}deg) translateY(-113px)`,
+            transform: `rotate(${i * 30}deg) translateY(-78px)`,
             backgroundColor: `${i % 12 === 0 ? '#c00' : i % 3 === 0 ? '#aaa' : '#ddd'}`,
             position: 'absolute',
             width: '2px',
             height: '8px',
-            margin: '113px 114px',
+            margin: '78px 80px',
         }}></span >)
     }
 
+    const size = 180;
+
     const OuterRing = styled.div`
         position: relative;
-        width: 250px;
-        height: 250px;
+        width: ${size}px;
+        height: ${size}px;
         margin: auto;
         padding: 5px;
         background-image: linear-gradient(#f7f7f7, #e0e0e0);
@@ -32,8 +34,8 @@ const ClockFace = (props) => {
         box-shadow: 0 10px 15px rgba(0, 0, 0, .15), 0 2px 2px rgba(0, 0, 0, .2);
     `
     const ClockBase = styled.div`
-        width: 250px;
-        height: 250px;
+        width: ${size}px;
+        height: ${size}px;
         background-color: #eee;
         border-radius: 50%;
         box-shadow: 0 0 5px #eee;
@@ -43,15 +45,15 @@ const ClockFace = (props) => {
         z-index: 1;
         top: 15px;
         left: 15px;
-        width: 230px;
-        height: 230px;
+        width: ${size - 50}px;
+        height: ${size - 50}px;
     `
 
     const ClockCenter = styled.span`
         position: absolute;
         z-index: 1;
-        width: 150px;
-        height: 150px;
+        width: ${size - 100}px;
+        height: ${size - 100}px;
         top: 55px;
         left: 55px;
         background-image: linear-gradient(#e3e3e3, #f7f7f7);
@@ -70,7 +72,7 @@ const ClockFace = (props) => {
 
     return (
         <ThemeProvider>
-            <OuterRing >
+            <OuterRing sx={{}}>
                 <ClockBase>
                     <Indicators>
                         {indicators}

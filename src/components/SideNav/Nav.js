@@ -7,25 +7,31 @@ import { Flex, Badge, NavLink } from '@theme-ui/components'
 import ThemeProvider from "../ThemeProvider";
 
 const Nav = () => {
+
+    const url = document.URL;
+    console.log(url);
+    var path = url.substr(url.lastIndexOf('/'), url.length);
+    console.log(path);
+
     return (
         <ThemeProvider>
             <Flex as='nav' py={2} sx={{ flexDirection: 'column', alignItems: 'center', color: 'text' }} >
-                <NavLink href='/home' sx={{ borderLeft: theme => `6px solid ${theme.colors.secondary}` }} >
+                <NavLink href='/home' variant={path === '/home' ? 'navActive' : 'nav'}>
                     Home
                 </NavLink>
-                <NavLink href='/weather' >
+                <NavLink href='/weather' variant={path === '/weather' ? 'navActive' : 'nav'} >
                     Weather
                 </NavLink>
-                <NavLink href='/time' >
+                <NavLink href='/time' variant={path === '/time' ? 'navActive' : 'nav'} >
                     Time
                 </NavLink>
-                <NavLink href='/habits' >
+                <NavLink href='/habits' variant={path === '/habits' ? 'navActive' : 'nav'} >
                     Habits
                 </NavLink>
-                <NavLink href='/news' >
+                <NavLink href='/news' variant={path === '/news' ? 'navActive' : 'nav'} >
                     News
                 </NavLink>
-                <NavLink href='/reports' >
+                <NavLink href='/reports' variant={path === '/reports' ? 'navActive' : 'nav'} >
                     Reports
                 </NavLink>
             </Flex>

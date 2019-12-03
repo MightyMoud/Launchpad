@@ -13,7 +13,7 @@ import NewsBody from './NewsBody';
 const NewsCard = ({ imgLink, title, content, source, articleURL, loading }) => {
     return (
         <ThemeProvider>
-            <Container variant='layout.NewsBlockCon'>
+            <Container variant='layout.NewsCardCon'>
                 {loading ? <Skeleton width={170} height={200} duration={0.5} /> : <NewsImage url={imgLink} />}
                 <NewsTextCon>
                     {loading ? <Skeleton width={400} duration={0.5} /> : <NewsTitle title={title} />}

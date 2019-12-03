@@ -26,6 +26,9 @@ const body = {
 
 export default merge(typography, {
     ...deep,
+    breakpoints: [
+        '767px', '1024px', '1440px',
+    ],
     colors: {
         ...deep.colors,
         blueHigh: '#12ACFD',
@@ -48,8 +51,24 @@ export default merge(typography, {
             width: '100%',
             textAlign: 'center',
             fontSize: '2',
-            height: '38px'
+            height: '38px',
+            '&:hover': {
+                borderLeft: t => `6px solid ${t.colors.secondary}`
+            }
+        },
+        navActive: {
+            fontFamily: 'Merriweather, sans-serif',
+            color: 'text',
+            px: '2',
+            py: '2',
+            my: '1',
+            width: '100%',
+            textAlign: 'center',
+            fontSize: '2',
+            height: '38px',
+            borderLeft: t => `6px solid ${t.colors.secondary}`
         }
+
     },
     forms: {
         label: {
@@ -140,7 +159,7 @@ export default merge(typography, {
         },
         symbols: {
             ...body,
-            fontSize: 4
+            fontSize: 2
         },
         numbers: {
             fontFamily: 'Fira Sans, sans-serif',
@@ -171,12 +190,17 @@ export default merge(typography, {
     },
     layout: {
         card: {
-            borderRadius: '20px',
+            borderRadius: '15px',
             flexDirection: 'column',
             justifyContent: 'space-around',
             alignItems: 'center',
-            minHeight: '450px',
-            width: '350px'
+            minHeight: '200px',
+            maxHeight: '220px',
+            position: 'relative',
+            minWidth: '140px',
+            width: '80%',
+            maxWidth: '200px',
+            transition: 'width 0.5s ease-in',
         },
         dayContainer: {
             position: 'relative',
@@ -196,12 +220,12 @@ export default merge(typography, {
             justifyContent: 'space-around',
             alignItems: 'center'
         },
-        NewsBlockCon: {
-            margin: 1,
+        NewsCardCon: {
+            mb: '2',
             display: 'flex',
             flexDirection: 'row',
-            width: '850px',
-            height: '100px',
+            width: '100%',
+            height: '70px',
             overflow: 'hidden',
             bg: 'background3',
             '&:hover .more': {
