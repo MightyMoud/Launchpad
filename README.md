@@ -2,7 +2,7 @@
 
 This is my second project with React. I've been learning React for two months now. 
 
-<img src="/Users/CReative59/Documents/Web Projects/launchpad/localhost_3000_home.png" style="zoom:33%;" />
+![](https://raw.githubusercontent.com/ms-mousa/Launchpad/master/Demos/localhost_3000_home.png)
 
 ## Contents:
 
@@ -57,7 +57,7 @@ No it's not that great. **get your documentation together guys please!** But *it
 
 First, lets' start with the Component Structure Diagram. I find this to be very important. Since most of my design happend as I code I didn't want to worry about what should be where or what name shoud it have. I just wanted to get in the flow and code! 😉
 
-<img src="/Users/CReative59/Documents/Web Projects/launchpad/Component Diagram.png" alt="Component Diagram" style="zoom:67%;" />
+![Component Structure](https://raw.githubusercontent.com/ms-mousa/Launchpad/master/Demos/Component%20Diagram.png)
 
 You can see It's pretty standard. I just call container stateful components engines! *DUH!* Simply cus they crunch data and communicate with APIs. My Mechanical Engineering bg is lurks in the distance! 🤷🏻‍♂️
 
@@ -65,19 +65,19 @@ You can see It's pretty standard. I just call container stateful components engi
 
 This is where the API to the OpenWeatherMaps happen and the results shown. CityInput handles input from the user and included AutoComplete component that does the AutoCompletion. 
 
-![](/Users/CReative59/Documents/Web Projects/launchpad/WeatherEngine Test-smallsize.gif)
+![](https://raw.githubusercontent.com/ms-mousa/Launchpad/master/Demos/WeatherEngine%20Test-smallsize.gif)
 
 I'm very happy about how it truned out. Sadly had to take out the MinMax part becuase of the size of other components I wanted to show on the home screen.
 
 💡I learned that not having a proper px by px design is not optimum. I developed this in Storybook and it was waay too big for how I'd actually ended up wanting to use it! 
 
-![](/Users/CReative59/Documents/Web Projects/launchpad/WeatherBlock.gif)
+![](https://raw.githubusercontent.com/ms-mousa/Launchpad/master/Demos/WeatherBlock.-smallgif.gif)
 
 ####TimeEngine ⏱
 
 *This is one of the most painful parts of the app.* From getting the animation done properly to changing the size of a pure CSS clock! Painful all the way. 😫  Taught me a lot! 💪🏻
 
-<img src="/Users/CReative59/Documents/Web Projects/launchpad/TimeEngine-smallsize.gif" style="zoom:70%;" />
+<img src="https://github.com/ms-mousa/Launchpad/blob/master/Demos/TimeEngine-smallsize.gif?raw=true" style="zoom:60%;" />
 
 The OWM API returns a UNIX UTC offset which I used to calculate the local remote time from. That part was fun! And yeah stay away from CSS animations for clock. Very computive intensive, although I got it controlled. 😅
 
@@ -85,7 +85,7 @@ The OWM API returns a UNIX UTC offset which I used to calculate the local remote
 
 So I'm using [NEWSApi](https://newsapi.org/) which is quite alright. Not bad. Their result is somehow not consistent sometimes in terms of length of description and all. But otherwise alright. 
 
-![NEWSEngine](/Users/CReative59/Documents/Web Projects/launchpad/NewsEngine.gif)
+![](https://github.com/ms-mousa/Launchpad/blob/master/Demos/NewsEngine-Small.gif?raw=true)
 
 Loading skeletos FTW 😉
 
@@ -93,19 +93,19 @@ Loading skeletos FTW 😉
 
 This is a simple component with Reach Router and some simple hover on and location signals. 
 
-![](/Users/CReative59/Documents/Web Projects/launchpad/SideNav.gif)
+![](https://raw.githubusercontent.com/ms-mousa/Launchpad/master/Demos/SideNav.gif)
 
 #### HabitTracker 📝
 
 This is a good one! I love the way it turned out. So this is split in two halves. The first is the happiness levels graph and the second is last week's summary. 
 
-![](/Users/CReative59/Documents/Web Projects/launchpad/HabitsTracker.gif)
+![](https://raw.githubusercontent.com/ms-mousa/Launchpad/master/Demos/HabitsTracker.gif)
 
 This Graph shows the happiness index and another metric the user chooses. In this case it's the daily steps. This is showing bogus data for sake of prototyping. 
 
 This second half shows the progress of the last week in terms of habit tracking: 
 
-![](/Users/CReative59/Documents/Web Projects/launchpad/Weeks Summary.gif)
+![](https://raw.githubusercontent.com/ms-mousa/Launchpad/master/Demos/Weeks%20Summary.gif)
 
 ---
 
@@ -117,4 +117,14 @@ It ended up all good anyway.
 
 I learned also how to structure the src folder and how to make component folders too. Learned Theme-UI and can easily change the look of the app with a couple of code changes: See below:
 
-![](/Users/CReative59/Documents/Web Projects/launchpad/localhost_3000_home-Dark.png)
+![](https://raw.githubusercontent.com/ms-mousa/Launchpad/master/Demos/localhost_3000_home-Dark.png)
+
+Dark Mode for the win! 💪🏻
+
+---
+
+You can reach out to me:
+
+Twitter: @DevShehata
+
+E-mail: Shehata@msmo.io

@@ -18,7 +18,7 @@ function App() {
         <SideNav />
         <MainScreenContainer >
           <Router>
-            <Home path='/home' />
+            <Home path='/' />
             <Weather path='/weather' />
           </Router>
         </MainScreenContainer>
