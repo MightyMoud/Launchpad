@@ -9,14 +9,12 @@ import ThemeProvider from "../ThemeProvider";
 const Nav = () => {
 
     const url = document.URL;
-    console.log(url);
     var path = url.substr(url.lastIndexOf('/'), url.length);
-    console.log(path);
 
     return (
         <ThemeProvider>
             <Flex as='nav' py={2} sx={{ flexDirection: 'column', alignItems: 'center', color: 'text' }} >
-                <NavLink href='/home' variant={path === '/home' ? 'navActive' : 'nav'}>
+                <NavLink href='/home' variant={path === '/' ? 'navActive' : 'nav'}>
                     Home
                 </NavLink>
                 <NavLink href='/weather' variant={path === '/weather' ? 'navActive' : 'nav'} >
