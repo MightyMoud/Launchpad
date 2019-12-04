@@ -38,15 +38,15 @@ const NewsEngine = () => {
     const [state, dispatch] = useReducer(reducer, inistialState)
     const { loading, articles } = state;
 
-    const [country, setCountry] = useState('AU');
-    const [category, setCategory] = useState('business');
+    const [country, setCountry] = useState('US');
+    const [category, setCategory] = useState('Technology');
 
 
     const getNews = async () => {
         dispatch({
             type: 'SEARCH_PROGRESS'
         })
-        let res = await fetch(`https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${key}&pageSize=2`)
+        let res = await fetch(`https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${key}&pageSize=3`)
         let resJSON = await res.json();
         let articles = await resJSON.articles;
         dispatch({
@@ -75,12 +75,13 @@ const NewsEngine = () => {
                         key={article.title}
                         imgLink={article.urlToImage}
                         title={article.title}
-                        content={article.description}
+                        content={article.content}
                         source={article.source.name}
                         articleURL={article.url}
                     ></NewsCard>
                 ) : (
                         <>
+                            <NewsCard loading={loading} />
                             <NewsCard loading={loading} />
                             <NewsCard loading={loading} />
                         </>

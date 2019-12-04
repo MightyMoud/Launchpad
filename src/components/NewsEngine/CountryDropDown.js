@@ -12,9 +12,9 @@ const CountryDropDown = ({ change, value }) => {
             <Box as='form' sx={{ color: 'text', width: '20%', position: 'absolute', top: '-30px', right: '11px' }}>
                 {/* <Label htmlFor='country'>Country</Label> */}
                 <Select onChange={change} value={value} name='country' mb={3} p={1}>
+                    <option value='us'>USA</option>
                     <option value='au'>Australia</option>
                     <option value='CA'>Canada</option>
-                    <option value='us'>USA</option>
                 </Select>
             </Box>
         </ThemeProvider>

@@ -1,68 +1,120 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# This is the Launchpad Project
 
-## Available Scripts
+This is my second project with React. I've been learning React for two months now. 
 
-In the project directory, you can run:
+<img src="/Users/CReative59/Documents/Web Projects/launchpad/localhost_3000_home.png" style="zoom:33%;" />
 
-### `npm start`
+## Contents:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Vision ✨
+2. Tools 🛠
+3. Components Breakdown ䷦
+4. Learning and Future 🚀
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+___
 
-### `npm test`
+### Vision ✨
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I built and designed this app simply because I need it. I need a place to launch my *everyday*. This should be the place where I get the essential information and help me track my progress in achieveing my goals. 
 
-### `npm run build`
+The habit tracker part is inspired by a Numbers sheet I've been filling up for a while. In that sheet I have my daily habits along with my proclaimed happiness index that I fill everyday. My vision for this module is that it will be able to tell you what habits have the most effect on your happines and more insights about your daily routines. Right now it's just a mock but in the future it will include data souced from your phone, sleep time and quality, steps, etc.., to produce better results.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+My family is spread apart across 4 different countries. I like to keep track on the time difference to decide when I should call and also on the weather. This inspired the first two modules. The Weather and the Global Time. 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+I also need to keep track on the global news across three countries at the USA, CA and AU. I added the dropdowns in the news Module to select the categroy too. Just for fun; won't be using this much. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This app has *five* screens. Right now only the home screen is done. Each detailed screen would be display more data about the section it's related to. Detailed weather forecast, detailed news magazine, detailed clock, calendar and meeting schedule component and finally a Reports screen where __All__ is put together to generate insights on how the Weather, News consumption, Daily habits affect your working hours, and happiness index. 🤯
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+###Tools 🛠
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+My main objective with this project was to learn. This reflected on my choice of tools fo sure. It's also important to note that this project is all my work. From the concept to desig to coding. So choosing the tools was very important. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Component Library : [Theme-UI](https://theme-ui.com/)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+I didn't want to go with a UI librar that will give me tons of components and all I will do is just put the lego pieces together. I wanted a libary that will handle the essentials only and let me explore and integrate parts from other libaries and work well with them.
 
-## Learn More
+[Theme-UI](https://theme-ui.com/) Gives this great balance. It ships with [Emotion](https://emotion.sh/docs/introduction) 👩‍🎤 out of the box and that is my favourite JSS libray. Them UI also handles themeing in a brilliant way. Meanwhile it only offers few components to work with. Just the essentials. Exactly what I'm looking for. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Design Software: [Figma](www.figma.com)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+No I'm not a designer and I don't claim to be. This project was put together as I code and according to the vivid images I came up in my mind before sleep *true story*. However, I needed a software where I can store the big outlines and rock the rest with the code. And you know what Figma works! I used it to make outline and most impotantly I used it to make the component [structure diagram](https://www.figma.com/file/BUCuTqQ7D5xxfJNG9FHTi9/Dash?node-id=23%3A0). *extremely handy.* 
 
-### Code Splitting
+#### Visualisation Library: [Nivo](https://nivo.rocks/)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+No it's not that great. **get your documentation together guys please!** But *it works* and it makes it easy to make responsive graphs that look pleasing. Easily integrated with the colors from Theme-UI's Theme. After digging around for an hour to know how to override the native themes which is *NOT* in the official documentation site. 😫
 
-### Analyzing the Bundle Size
+#####I used [Storybook](https://storybook.js.org/) too, but let it go after knowing how hard it is to get images to work with CRA 🤷🏻‍♂️. It was fun to learn and I really like CDD. 👌🏻
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+---
 
-### Making a Progressive Web App
+###Component Breakdown ䷦
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+*The fun part!*😄
 
-### Advanced Configuration
+####Component Structure Diagram
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+First, lets' start with the Component Structure Diagram. I find this to be very important. Since most of my design happend as I code I didn't want to worry about what should be where or what name shoud it have. I just wanted to get in the flow and code! 😉
 
-### Deployment
+<img src="/Users/CReative59/Documents/Web Projects/launchpad/Component Diagram.png" alt="Component Diagram" style="zoom:67%;" />
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+You can see It's pretty standard. I just call container stateful components engines! *DUH!* Simply cus they crunch data and communicate with APIs. My Mechanical Engineering bg is lurks in the distance! 🤷🏻‍♂️
 
-### `npm run build` fails to minify
+#### WeatherEngine ☁️
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This is where the API to the OpenWeatherMaps happen and the results shown. CityInput handles input from the user and included AutoComplete component that does the AutoCompletion. 
+
+![](/Users/CReative59/Documents/Web Projects/launchpad/WeatherEngine Test-smallsize.gif)
+
+I'm very happy about how it truned out. Sadly had to take out the MinMax part becuase of the size of other components I wanted to show on the home screen.
+
+💡I learned that not having a proper px by px design is not optimum. I developed this in Storybook and it was waay too big for how I'd actually ended up wanting to use it! 
+
+![](/Users/CReative59/Documents/Web Projects/launchpad/WeatherBlock.gif)
+
+####TimeEngine ⏱
+
+*This is one of the most painful parts of the app.* From getting the animation done properly to changing the size of a pure CSS clock! Painful all the way. 😫  Taught me a lot! 💪🏻
+
+<img src="/Users/CReative59/Documents/Web Projects/launchpad/TimeEngine-smallsize.gif" style="zoom:70%;" />
+
+The OWM API returns a UNIX UTC offset which I used to calculate the local remote time from. That part was fun! And yeah stay away from CSS animations for clock. Very computive intensive, although I got it controlled. 😅
+
+#### NewsEngine 🗞
+
+So I'm using [NEWSApi](https://newsapi.org/) which is quite alright. Not bad. Their result is somehow not consistent sometimes in terms of length of description and all. But otherwise alright. 
+
+![NEWSEngine](/Users/CReative59/Documents/Web Projects/launchpad/NewsEngine.gif)
+
+Loading skeletos FTW 😉
+
+#### SideNav 🧭
+
+This is a simple component with Reach Router and some simple hover on and location signals. 
+
+![](/Users/CReative59/Documents/Web Projects/launchpad/SideNav.gif)
+
+#### HabitTracker 📝
+
+This is a good one! I love the way it turned out. So this is split in two halves. The first is the happiness levels graph and the second is last week's summary. 
+
+![](/Users/CReative59/Documents/Web Projects/launchpad/HabitsTracker.gif)
+
+This Graph shows the happiness index and another metric the user chooses. In this case it's the daily steps. This is showing bogus data for sake of prototyping. 
+
+This second half shows the progress of the last week in terms of habit tracking: 
+
+![](/Users/CReative59/Documents/Web Projects/launchpad/Weeks Summary.gif)
+
+---
+
+### Learning and Future 🚀
+
+I learne many things. Taking a project this scale after two weeks of knowing what React is was quite challenging. Loved CDD but I think I didn't do it that well. I needed more robust px by px design before I started. That I thought would be a waste of time -> My objective is to learn React. 
+
+It ended up all good anyway. 
+
+I learned also how to structure the src folder and how to make component folders too. Learned Theme-UI and can easily change the look of the app with a couple of code changes: See below:
+
+![](/Users/CReative59/Documents/Web Projects/launchpad/localhost_3000_home-Dark.png)

@@ -52,10 +52,10 @@ const ClockFace = (props) => {
     const ClockCenter = styled.span`
         position: absolute;
         z-index: 1;
-        width: ${size - 100}px;
-        height: ${size - 100}px;
-        top: 55px;
-        left: 55px;
+        width: ${size - 70}px;
+        height: ${size - 70}px;
+        top: 40px;
+        left: 40px;
         background-image: linear-gradient(#e3e3e3, #f7f7f7);
         border-radius: 50%;
         box-shadow: inset 0 -1px 0 #fafafa, inset 0 1px 0 #e3e3e3;

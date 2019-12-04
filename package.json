@@ -6,6 +6,8 @@
     "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.23",
     "@mdx-js/react": "^1.5.1",
+    "@nivo/line": "^0.59.3",
+    "@nivo/pie": "^0.59.1",
     "@theme-ui/color": "^0.2.49",
     "@theme-ui/components": "^0.2.49",
     "@theme-ui/presets": "^0.2.44",

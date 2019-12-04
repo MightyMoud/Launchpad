@@ -12,8 +12,8 @@ const CategoryDropDown = ({ value, change }) => {
             <Box as='form' sx={{ color: 'text', width: '20%', position: 'absolute', top: '-30px' }}>
                 {/* <Label htmlFor='Category'>Category</Label> */}
                 <Select onChange={change} value={value} name='country' mb={3} p={1}>
-                    <option value='business'>Business</option>
                     <option value='technology'>Technology</option>
+                    <option value='business'>Business</option>
                     <option value='sports'>Sports</option>
                 </Select>
             </Box>

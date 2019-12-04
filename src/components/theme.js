@@ -33,7 +33,7 @@ export default merge(typography, {
     colors: {
         ...deep.colors,
         blueHigh: '#12ACFD',
-        background3: '#29457C'
+        background3: '#29457C',
     },
     images: {
         avatar: {
@@ -158,6 +158,10 @@ export default merge(typography, {
             ...body,
             fontSize: 3
         },
+        h4: {
+            ...body,
+            fontSize: 2
+        },
         symbols: {
             ...body,
             fontSize: 2
@@ -169,7 +173,7 @@ export default merge(typography, {
         },
         day: {
             fontFamily: 'Ropa Sans, sans-serif',
-            fontSize: 4,
+            fontSize: 3,
             color: '#c00'
         },
         body: {
@@ -212,7 +216,7 @@ export default merge(typography, {
             zIndex: '2',
             bg: 'ghostwhite',
             width: '15%',
-            borderRadius: '10px',
+            borderRadius: '6px',
             boxShadow: 'inset 0 2px 2px 0 rgba(0,0,0,.3), inset 0 -2px 2px 0 rgba(255,255,255,.2)',
             textAlign: 'center',
         },
@@ -227,7 +231,7 @@ export default merge(typography, {
             display: 'flex',
             flexDirection: 'row',
             width: '100%',
-            height: 'calc(15vh - 30px)',
+            height: 'calc(10vh - 30px)',
             overflow: 'hidden',
             bg: lighten('background', 0.10),
             '&:hover .more': {

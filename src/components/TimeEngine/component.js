@@ -98,7 +98,7 @@ const TimeEngine = ({ location }) => {
 
     return (
         <ThemeProvider>
-            <Container  sx={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'column', alignItems: 'center', height: 'calc(33vh - 20px)',  }}>
+            <Container sx={{ display: 'flex', justifyContent: 'space-between', flexDirection: 'column', alignItems: 'center', height: 'calc(33vh - 40px)', }}>
                 <ClockCard remoteDate={calcTime(state.offset)} />
                 <Box sx={{ textAlign: 'center' }}>
                     <CityField

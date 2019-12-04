@@ -16,7 +16,7 @@ const NewsCard = ({ imgLink, title, content, source, articleURL, loading }) => {
             <Container variant='layout.NewsCardCon'>
                 {loading ? <Skeleton width={170} height={200} duration={0.5} /> : <NewsImage url={imgLink} />}
                 <NewsTextCon>
-                    {loading ? <Skeleton width={700} duration={0.5} /> : <NewsTitle title={title} />}
+                    {loading ? <Skeleton width={1400} duration={0.5} /> : <NewsTitle title={title} />}
                     {loading ? <Skeleton count={2} duration={0.5} /> : <NewsBody content={content} />}
                     <Box sx={{ position: 'absolute', top: '75%' }}>
                         {loading ? <Skeleton width={40} height={14} duration={0.5} /> : <Badge mx={0} px={1} bg='primary'> {source}</Badge>}
