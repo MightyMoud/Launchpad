@@ -27,7 +27,7 @@ This app has *five* screens. Right now only the home screen is done. Each detail
 
 ---
 
-###Tools 🛠
+### Tools 🛠
 
 My main objective with this project was to learn. This reflected on my choice of tools fo sure. It's also important to note that this project is all my work. From the concept to desig to coding. So choosing the tools was very important. 
 
@@ -45,15 +45,15 @@ No I'm not a designer and I don't claim to be. This project was put together as 
 
 No it's not that great. **get your documentation together guys please!** But *it works* and it makes it easy to make responsive graphs that look pleasing. Easily integrated with the colors from Theme-UI's Theme. After digging around for an hour to know how to override the native themes which is *NOT* in the official documentation site. 😫
 
-#####I used [Storybook](https://storybook.js.org/) too, but let it go after knowing how hard it is to get images to work with CRA 🤷🏻‍♂️. It was fun to learn and I really like CDD. 👌🏻
+##### I used [Storybook](https://storybook.js.org/) too, but let it go after knowing how hard it is to get images to work with CRA 🤷🏻‍♂️. It was fun to learn and I really like CDD. 👌🏻
 
 ---
 
-###Component Breakdown ䷦
+### Component Breakdown ䷦
 
 *The fun part!*😄
 
-####Component Structure Diagram
+#### Component Structure Diagram
 
 First, lets' start with the Component Structure Diagram. I find this to be very important. Since most of my design happend as I code I didn't want to worry about what should be where or what name shoud it have. I just wanted to get in the flow and code! 😉
 
@@ -73,11 +73,11 @@ I'm very happy about how it truned out. Sadly had to take out the MinMax part be
 
 ![](https://raw.githubusercontent.com/ms-mousa/Launchpad/master/Demos/WeatherBlock.-smallgif.gif)
 
-####TimeEngine ⏱
+#### TimeEngine ⏱
 
 *This is one of the most painful parts of the app.* From getting the animation done properly to changing the size of a pure CSS clock! Painful all the way. 😫  Taught me a lot! 💪🏻
 
-<img src="https://github.com/ms-mousa/Launchpad/blob/master/Demos/TimeEngine-smallsize.gif?raw=true" style="zoom:60%;" />
+<img src="https://github.com/ms-mousa/Launchpad/blob/master/Demos/TimeEngine-smallsize.gif?raw=true" style="zoom:60%;" align='center'/>
 
 The OWM API returns a UNIX UTC offset which I used to calculate the local remote time from. That part was fun! And yeah stay away from CSS animations for clock. Very computive intensive, although I got it controlled. 😅
 
@@ -87,7 +87,7 @@ So I'm using [NEWSApi](https://newsapi.org/) which is quite alright. Not bad. Th
 
 ![](https://github.com/ms-mousa/Launchpad/blob/master/Demos/NewsEngine-Small.gif?raw=true)
 
-Loading skeletos FTW 😉
+Loading skeletons FTW 😉
 
 #### SideNav 🧭
 
