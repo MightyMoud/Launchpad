@@ -5,7 +5,7 @@ import { jsx } from 'theme-ui';
 
 import ThemeProvider from '../ThemeProvider'
 import './styles.css'
-// import { citiesList } from './citiesList.js'
+import { citiesList } from './citiesList.js'
 
 const AutoComplete = (props) => {
 
@@ -13,7 +13,7 @@ const AutoComplete = (props) => {
     const [suggestions, setSuggestions] = useState([]);
     const [city, setCity] = useState('');
 
-    const citiesList = [{ city: 'Cairo', country: 'Egypt' }, { city: 'New York', country: 'USA' }]
+    // const citiesList = [{ city: 'Cairo', country: 'Egypt' }, { city: 'New York', country: 'USA' }]
 
     // Teach Autosuggest how to calculate suggestions for any given input value.
     const getSuggestions = value => {
