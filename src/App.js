@@ -1,29 +1,27 @@
 /**@jsx jsx */
-import './App.css';
-import ThemeProvider from './components/ThemeProvider';
-import { jsx } from 'theme-ui';
-import { Flex } from '@theme-ui/components';
-import { Router } from '@reach/router'
+import "./App.css";
+import ThemeProvider from "./components/ThemeProvider";
+import { jsx } from "theme-ui";
+import { Flex } from "@theme-ui/components";
+import { Router } from "@reach/router";
 
-import SideNav from './components/SideNav/component'
-import Home from './components/Home/component'
-import Weather from './components/Weather/component'
-import MainScreenContainer from './components/MainScreenContainer/component'
+import SideNav from "./components/SideNav/component";
+import Home from "./pages/Home/index";
+import Weather from "./pages/Weather/index";
+import MainScreenContainer from "./components/MainScreenContainer/component";
 
 function App() {
   return (
     <ThemeProvider>
-
       <Flex>
         <SideNav />
-        <MainScreenContainer >
+        <MainScreenContainer>
           <Router>
-            <Home path='/' />
-            <Weather path='/weather' />
+            <Home path="/" />
+            <Weather path="/weather" />
           </Router>
         </MainScreenContainer>
       </Flex>
-
     </ThemeProvider>
   );
 }

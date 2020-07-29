@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@chakra-ui/core": "^0.5.2",
     "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.23",
     "@mdx-js/react": "^1.5.1",
@@ -13,6 +14,8 @@
     "@theme-ui/presets": "^0.2.44",
     "@theme-ui/typography": "^0.2.46",
     "lodash.merge": "^4.6.2",
+    "node-fetch": "^2.6.0",
+    "node-vibrant": "^3.1.5",
     "reach-router": "0.0.0",
     "react": "^16.12.0",
     "react-autosuggest": "^9.4.3",
