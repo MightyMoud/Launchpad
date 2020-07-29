@@ -80,8 +80,8 @@ const NewsEngine = () => {
           value={category}
           change={(e) => setCategory(e.target.value)}
         />
-        {!loading ? (
-          articles?.map((article) => (
+        {!loading && !!articles ? (
+          articles.map((article) => (
             <NewsCard
               key={article.title}
               imgLink={article.urlToImage}
