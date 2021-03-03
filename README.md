@@ -4,6 +4,9 @@ This is my second project with React. I've been learning React for two months no
 
 ![](https://raw.githubusercontent.com/ms-mousa/Launchpad/master/Demos/localhost_3000_home.png)
 
+Note: Icons used are here: [Icons.zip](https://github.com/ms-mousa/Launchpad/files/6079751/Icons.zip)
+
+
 ## Contents:
 
 1. Vision ✨
