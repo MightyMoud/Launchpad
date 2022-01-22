@@ -14,7 +14,7 @@
     "@theme-ui/presets": "^0.2.44",
     "@theme-ui/typography": "^0.2.46",
     "lodash.merge": "^4.6.2",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^3.1.1",
     "node-vibrant": "^3.1.5",
     "reach-router": "0.0.0",
     "react": "^16.12.0",
